@@ -43,11 +43,11 @@ while(inputString.contains("[")) {
 
 // узнаем множитель для субстроки
     factor = Integer.parseInt(inputString.charAt(firstIndex - 1) + "");
-            System.out.println("first = "+ firstIndex +", last = "+ lastIndex + ", factor = "+ factor );
+
 
 // определяем субстроку
     subString = inputString.substring(firstIndex+1, lastIndex);
-                      System.out.println("sub = "+ subString.repeat(factor));
+
 
 // берем начало строки, конец строки и между ними вставляем умноженную субстроку
     start =   inputString.substring(0, firstIndex-1);
