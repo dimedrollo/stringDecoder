@@ -21,8 +21,8 @@ public class Main {
     }
 
 // метод для валидации строки по паттерну
-    public static boolean validateInputString(String inputString){
-        String pattern = "(\\d+\\[([a-zA-Z]*(\\d+\\[)*[a-zA-Z]*(\\d+\\[)*\\]*\\w*)*)(\\d+\\[)((\\d+\\[)*[a-zA-Z]+(\\d+\\[)*\\]\\w*)*\\]?";
+    private static boolean validateInputString(String inputString){
+        String pattern = "(\\d+\\[([a-zA-Z]*(\\d+\\[)*[a-zA-Z]*(\\d+\\[)*]*\\w*)*)(\\d+\\[)((\\d+\\[)*[a-zA-Z]+(\\d+\\[)*]\\w*)*]?";
         Pattern r = Pattern.compile(pattern);
         Matcher m = r.matcher(inputString);
         return  m.matches();
@@ -30,7 +30,7 @@ public class Main {
 
 
 // метод распаковки строки
-    public static String decodeString(String inputString){
+    private static String decodeString(String inputString){
         int firstIndex, lastIndex, factor;
         String subString, start,end;
 
